@@ -15,14 +15,14 @@ jobs:
 
     - name: Entorno Node config
       uses: actions/setup-node@v4
-        with:
-          node-version: 18
+      with:
+       node-version: 18
 
     - name: Ejecutar comandos
-      run npm i
+      run: npm i
 
     - name: Ejecutar comandos
-      run npm test
+      run: npm test
 
     - name: Crear imagen
       uses: cloudposse/github-action-docker-compose-test-run@main  
